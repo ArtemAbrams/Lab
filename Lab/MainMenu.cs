@@ -117,17 +117,9 @@ namespace Lab
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
-            if(houses != null)
-            {
                 searchForm = new SearchForm(houses, this, dataGrid);
                 searchForm.Show();
-            }
-            else
-            {
-                MessageBox.Show("No data to search");
-            }
         }
-
         private void Edit_Click(object sender, EventArgs e)
         {
             Edit_Click_Button();
