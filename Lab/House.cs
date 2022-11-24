@@ -10,7 +10,7 @@ namespace Lab
 {
     public class House
     {
-        public uint? PublishingHouseId { get; set; }
+        public uint PublishingHouseId { get; set; }
 
         public string? Title { get; set; }
 
@@ -30,7 +30,7 @@ namespace Lab
     }
     public class CPublishingHouse
     {
-        public uint? Id { get; set; }
+        public uint Id { get; set; }
         public string? Name { get; set; }
         public string? Adress { get; set; }
         public CPublishingHouse() { }

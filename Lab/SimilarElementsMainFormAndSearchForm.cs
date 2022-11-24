@@ -22,6 +22,7 @@ namespace Lab
         protected const int theFirstIndex = 0;
         int theLastIndex;
         protected formForData? formData;
+        protected const int zeroElements = 0;
         protected void InitializeDataGridView(DataGridView dataGridView)
         {
             dataGridView1 = dataGridView;
@@ -39,7 +40,7 @@ namespace Lab
         }
         protected void buttonNext_Click_Button()
         {
-            if(houses != null)
+            if(houses != null && houses?.Count()!=zeroElements)
             {
                 theLastIndex = houses.Count() - 1;
                 if (index == theLastIndex)
@@ -55,7 +56,7 @@ namespace Lab
         }
         protected void buttonPreviously_Click_Button()
         {
-          if (houses != null)
+          if (houses != null && houses?.Count() != zeroElements)
             {
                 if (index == theFirstIndex)
                 {
@@ -70,13 +71,15 @@ namespace Lab
         }
         protected void DeleteButton_Click_Button()
         {
-          
-            houses?.Remove(houses[index]);
+            if (houses != null && houses?.Count() != zeroElements)
+            {
+                houses.Remove(houses[index]);
+            }
             OpenFileOrDeleteObjectDeseralization();
         }
         protected void OpenFileOrDeleteObjectDeseralization()
         {
-            if (houses != null && houses?.Count()!=0)
+            if (houses != null && houses?.Count()!= zeroElements)
             {
                 index = theFirstIndex;
                 dataGrid.DeseralizationTheDate(houses, index);
@@ -95,9 +98,9 @@ namespace Lab
         protected void Edit_Click_Button()
         {
 
-            if (houses != null)
+            if (houses != null && houses?.Count()!= zeroElements)
             {
-                formData = new EditHouse(houses, dataGrid, "Change the data to edit a house", dataGridView1, index, GetType());
+                formData = new EditHouse(houses, dataGrid, "Change the data to edit a house", dataGridView1, index, Type());
                 formData.Show();
             }
             else
@@ -105,7 +108,7 @@ namespace Lab
                 MessageBox.Show("No elements :(");
             }
         }
-        protected SimilarElementsMainFormAndSearchForm GetType()
+        protected SimilarElementsMainFormAndSearchForm Type()
         {
             return this;
         }

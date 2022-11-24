@@ -12,7 +12,7 @@ namespace Lab
 {
     public partial class SearchForm : SimilarElementsMainFormAndSearchForm
     {
-        List<House> house = new List<House>();
+        List<House>? house = new List<House>();
         Menu menu;
         DeseralizationToDataGrid dataGridMenu;
         LinqClass linqClass;
@@ -27,15 +27,18 @@ namespace Lab
         }
         private void Edit_Click(object sender, EventArgs e)
         {
-            Edit_Click_Button();
-            int indexFind = house.IndexOf(houses[index]);
-            house[indexFind] = houses[index];
-            MenuDataGrid();
+            if(houses!=null)
+            {
+                Edit_Click_Button();
+                int indexFind = house.IndexOf(houses[index]);
+                house[indexFind] = houses[index];
+                MenuDataGrid();
+            }
         }
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             house?.Remove(houses?[index]);
-            if(house.Count() ==0)
+            if (house?.Count == zeroElements)
             {
                 house = null;
             }
