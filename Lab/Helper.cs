@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab
 {
-    class LinqClass
+    class Helper
     {
         private List<House>? houses;
-        public LinqClass(List<House> houses)
+        public Helper(List<House> houses)
         {
             this.houses = houses;
         }

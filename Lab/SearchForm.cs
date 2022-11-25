@@ -15,7 +15,7 @@ namespace Lab
         List<House>? house = new List<House>();
         Menu menu;
         DeseralizationToDataGrid dataGridMenu;
-        LinqClass linqClass;
+        Helper linqClass;
         public SearchForm(List<House> houses, Menu menu, DeseralizationToDataGrid dataGridMenu)
         {
             this.dataGridMenu = dataGridMenu;
@@ -57,11 +57,11 @@ namespace Lab
         private void SeacrhButton_Click(object sender, EventArgs e)
         {
             houses = new List<House>();
-            linqClass = new LinqClass(house);
+            linqClass = new Helper(house);
             linqClass.TitleSearch(TitleBox, ref houses);
             linqClass.IdSearch(IdBox, ref houses);
             linqClass.AdressSearch(AdressBox, ref houses);
-            if(houses != null && houses.Count() !=0)
+            if(houses != null && houses.Count() !=zeroElements)
             {
                 dataGrid?.DeseralizationTheDate(houses, theFirstIndex);
                 index = theFirstIndex;
