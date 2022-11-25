@@ -12,8 +12,7 @@ namespace Lab
         OpenFileDialog openFileDialog;
         SaveFileDialog saveFileDialog;
         DeseralizationToList deseralizationToList;
-        const string openFilter = "Json files(*.json)|*.json|All files(*.*)|*.*";
-        const string saveFilter = "Json files(*.json)|*.json|All files(*.*)|*.*";
+        const string Filter = "Json files(*.json)|*.json|All files(*.*)|*.*";
         string OpenFilename;
         string SaveFilename;    
         const int height = 10;
@@ -23,8 +22,8 @@ namespace Lab
         {
             openFileDialog = new OpenFileDialog();
             saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = saveFilter;
-            openFileDialog.Filter = openFilter;
+            saveFileDialog.Filter = Filter;
+            openFileDialog.Filter = Filter;
             InitializeComponent();
             InitializeDataGridView(dataGridView);
             dataGrid = new DeseralizationToDataGrid(dataGridView);
