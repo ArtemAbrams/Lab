@@ -82,18 +82,31 @@ namespace Lab
         }
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            serialization = new Serialization(OpenFilename);
-            serialization.Serialize(houses);
+            try
+            {
+                serialization = new Serialization(OpenFilename);
+                serialization.Serialize(houses);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void SaveAsbutton_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
-                return;
-            SaveFilename = saveFileDialog.FileName;
-            serialization = new Serialization(SaveFilename);
-            serialization.Serialize(houses);
-
+            try
+            {
+                if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                    return;
+                SaveFilename = saveFileDialog.FileName;
+                serialization = new Serialization(SaveFilename);
+                serialization.Serialize(houses);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
        private void buttonNext_Click(object sender, EventArgs e)
         {

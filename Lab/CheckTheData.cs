@@ -18,7 +18,7 @@ namespace Lab
                 }
                 else
                 {
-                    MessageBox.Show("Wrong value in " + textBox.Name + "value must be a positive integer");
+                    MessageBox.Show("Wrong value in " + textBox.Name + " value must be a positive integer");
                     textBox.Clear();
                     return false;
                 }
@@ -35,7 +35,7 @@ namespace Lab
             {
                 if (uint.TryParse(textBox.Text, out uint number))
                 {
-                    MessageBox.Show("Wrong value in " + textBox.Name + "the value must be text");
+                    MessageBox.Show("Wrong value in " + textBox.Name + " the value must be text");
                     textBox.Clear();
                     return false;
                 }
@@ -56,7 +56,7 @@ namespace Lab
             {
                 if (uint.TryParse(textBox.Text, out uint number))
                 {
-                    MessageBox.Show("Wrong value in " + textBox.Name + "the value was not used in the search");
+                    MessageBox.Show("Wrong value in " + textBox.Name + " the value was not used in the search");
                     textBox.Clear();
                     return false;
                 }
@@ -80,7 +80,7 @@ namespace Lab
                 }
                 else
                 {
-                    MessageBox.Show("Wrong value in " + textBox.Name + "the value was not used in the search");
+                    MessageBox.Show("Wrong value in " + textBox.Name + " the value was not used in the search");
                     textBox.Clear();
                     return false;
                 }
