@@ -56,6 +56,7 @@ namespace Lab
         }
         protected void buttonPreviously_Click_Button()
         {
+            MessageBox.Show(houses.Count().ToString());
           if (houses != null && houses?.Count() != zeroElements)
             {
                 if (index == theFirstIndex)
@@ -100,7 +101,7 @@ namespace Lab
 
             if (houses != null && houses?.Count()!= zeroElements)
             {
-                formData = new EditHouse(houses, dataGrid, "Change the data to edit a house", dataGridView1, index, Type());
+                formData = new EditHouse(ref houses, dataGrid, "Change the data to edit a house", dataGridView1, index, Type());
                 formData.Show();
             }
             else

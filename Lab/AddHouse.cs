@@ -9,27 +9,16 @@ namespace Lab
 {
     class AddHouse : formForData
     {
-        List<House>? house = new List<House>();
-        public AddHouse( List<House> houses, DeseralizationToDataGrid dataGrid, string name, SimilarElementsMainFormAndSearchForm menu) : base( houses, dataGrid, name, menu)
+        public AddHouse(ref List<House> houses, DeseralizationToDataGrid dataGrid, string name, SimilarElementsMainFormAndSearchForm menu) : base(ref houses, dataGrid, name, menu)
         {
         }
         protected override void ConfirmButton_Click(object sender, EventArgs e)
         {
             if (CheckDate())
             {
-                if (houses == null)
-                {
-                    house?.Add(new House(uint.Parse(PublishingHouseIdBox.Text), TitleBox.Text, uint.Parse(IdBox.Text), NameBox.Text, AdressBox.Text));
-                    menu.GetList(house);
-                    menu.GetIndex(house.Count()-1);
-                    dataGrid.DeseralizationTheDate(house, house.Count() - 1);
-                }
-                else
-                {
-                    houses?.Add(new House(uint.Parse(PublishingHouseIdBox.Text), TitleBox.Text, uint.Parse(IdBox.Text), NameBox.Text, AdressBox.Text));
-                    menu.GetIndex(houses.Count()-1);
-                    dataGrid.DeseralizationTheDate(houses, houses.Count() - 1);
-                }
+                Helper.CreateHouse(ref houses, PublishingHouseIdBox, TitleBox, IdBox, NameBox, AdressBox);
+                menu.GetIndex(houses.Count()-1);
+                dataGrid.DeseralizationTheDate(houses, houses.Count() - 1);
                 Close();
             }
         }

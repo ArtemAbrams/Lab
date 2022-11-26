@@ -18,6 +18,7 @@ namespace Lab
         const int height = 10;
         Serialization serialization;
         SearchForm searchForm;
+        AboutMe aboutMe;
         public Menu()
         {
             openFileDialog = new OpenFileDialog();
@@ -30,7 +31,7 @@ namespace Lab
         }
         private void AboutButton_Click(object sender, EventArgs e)
         {
-            AboutMe aboutMe = new AboutMe();
+            aboutMe = new AboutMe();
             aboutMe.Show();
         }
 
@@ -123,8 +124,13 @@ namespace Lab
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            formData = new AddHouse(houses, dataGrid, "Enter data to create a new house", this);
+            if(houses == null)
+            {
+                houses = new List<House>();
+            }
+            formData = new AddHouse(ref houses, dataGrid, "Enter data to create a new house", this);
             formData.Show();
+     
         }
 
         private void SearchButton_Click(object sender, EventArgs e)

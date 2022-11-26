@@ -12,7 +12,7 @@ namespace Lab
     {
         DataGridView dataGridView;
         int index;
-        public EditHouse(List<House> houses, DeseralizationToDataGrid dataGrid, string name, DataGridView dataGridView, int index, SimilarElementsMainFormAndSearchForm menu) : base(houses, dataGrid, name, menu)
+        public EditHouse(ref List<House> houses, DeseralizationToDataGrid dataGrid, string name, DataGridView dataGridView, int index, SimilarElementsMainFormAndSearchForm menu) : base(ref houses, dataGrid, name, menu)
         {
             this.dataGridView = dataGridView;
             InitializationHouseInTextBoxs();
@@ -30,11 +30,7 @@ namespace Lab
         {
             if (CheckDate())
             {
-                houses[index].PublishingHouseId = uint.Parse(PublishingHouseIdBox.Text);
-                houses[index].Title = TitleBox.Text;
-                houses[index].PublishingHouse.Id=uint.Parse(IdBox.Text);
-                houses[index].PublishingHouse.Name=NameBox.Text;
-                houses[index].PublishingHouse.Adress = AdressBox.Text;
+                Helper.EditHouse(ref houses, PublishingHouseIdBox, TitleBox, IdBox, NameBox, AdressBox, index);
                 dataGrid.DeseralizationTheDate(houses, index);
                 Close();
             }

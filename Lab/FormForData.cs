@@ -17,7 +17,7 @@ namespace Lab
         protected DeseralizationToDataGrid dataGrid;
         protected bool check;
         protected SimilarElementsMainFormAndSearchForm menu;
-        public formForData(List<House> houses, DeseralizationToDataGrid dataGrid, string name, SimilarElementsMainFormAndSearchForm menu)
+        public formForData(ref List<House> houses, DeseralizationToDataGrid dataGrid, string name, SimilarElementsMainFormAndSearchForm menu)
         {
             this.menu = menu;
             this.houses = houses;

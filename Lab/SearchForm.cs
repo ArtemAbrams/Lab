@@ -27,9 +27,9 @@ namespace Lab
         }
         private void Edit_Click(object sender, EventArgs e)
         {
-            if(houses!=null)
+            Edit_Click_Button();
+            if (houses!=null)
             {
-                Edit_Click_Button();
                 int indexFind = house.IndexOf(houses[index]);
                 house[indexFind] = houses[index];
                 MenuDataGrid();

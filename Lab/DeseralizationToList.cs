@@ -17,10 +17,12 @@ namespace Lab
         }
         public List<House> DeseralizationFromFile()
         {
+            MessageBox.Show("tut");
             try
             {
                 using (var fs = new FileStream(filename, FileMode.Open))
                 {
+                    MessageBox.Show("tut");
                     var houses = JsonSerializer.Deserialize<List<House>>(fs);
                     return houses;
                 }
