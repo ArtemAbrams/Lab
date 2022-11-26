@@ -50,7 +50,7 @@ namespace Lab
                 return false;
             }
         }
-        public static bool CheckTheStringForsearch(TextBox textBox)
+        public static bool CheckTheStringForSearch(TextBox textBox)
         {
             if (textBox.Text != "")
             {

@@ -17,7 +17,7 @@ namespace Lab
         public void TitleSearch(TextBox textBox, ref List<House> houseFind)
         {
             List<House> result = new List<House>();
-            if (CheckTheData.CheckTheStringForsearch(textBox))
+            if (CheckTheData.CheckTheStringForSearch(textBox))
             {
                 if(houses != null)
                 {
@@ -44,7 +44,7 @@ namespace Lab
         public void AdressSearch(TextBox textBox, ref List<House> houseFind)
         {
             List<House> result = new List<House>();
-            if (CheckTheData.CheckTheStringForsearch(textBox))
+            if (CheckTheData.CheckTheStringForSearch(textBox))
             {
                 if(houses != null)
                 {

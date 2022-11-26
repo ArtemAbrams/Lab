@@ -27,8 +27,8 @@ namespace Lab
         }
         public bool CheckDate()
         {
-            bool numberCheck = CheckTheData.CheckTheNumber(PublishingHouseIdBox) && CheckTheData.CheckTheNumber(IdBox);
-            bool stingCheck = CheckTheData.CheckTheString(NameBox) && CheckTheData.CheckTheString(TitleBox) && CheckTheData.CheckTheString(AdressBox);
+            bool numberCheck = CheckTheData.CheckTheNumber(PublishingHouseIdBox) & CheckTheData.CheckTheNumber(IdBox);
+            bool stingCheck = CheckTheData.CheckTheString(NameBox) & CheckTheData.CheckTheString(TitleBox) && CheckTheData.CheckTheString(AdressBox);
             return numberCheck && stingCheck;
         }
         protected virtual void ConfirmButton_Click(object sender, EventArgs e)

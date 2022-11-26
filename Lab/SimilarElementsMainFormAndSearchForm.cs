@@ -56,7 +56,6 @@ namespace Lab
         }
         protected void buttonPreviously_Click_Button()
         {
-            MessageBox.Show(houses.Count().ToString());
           if (houses != null && houses?.Count() != zeroElements)
             {
                 if (index == theFirstIndex)
