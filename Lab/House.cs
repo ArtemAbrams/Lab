@@ -15,9 +15,6 @@ namespace Lab
         public string? Title { get; set; }
 
         public CPublishingHouse? PublishingHouse { get; set; }
-        public House()
-        {
-        }
         public House(uint publishingHouseId, string title, uint id, string name, string adress)
         {
             PublishingHouseId = publishingHouseId;
@@ -33,12 +30,5 @@ namespace Lab
         public uint Id { get; set; }
         public string? Name { get; set; }
         public string? Adress { get; set; }
-        public CPublishingHouse() { }
-        public CPublishingHouse(uint id, string name, string adress)
-        {
-            Id = id;
-            Name = name;
-            Adress = adress;
-        }
     }
 }

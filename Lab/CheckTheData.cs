@@ -33,7 +33,7 @@ namespace Lab
         {
             if (textBox.Text != "")
             {
-                if (uint.TryParse(textBox.Text, out uint number))
+                if (int.TryParse(textBox.Text, out int number))
                 {
                     MessageBox.Show("Wrong value in " + textBox.Name + " the value must be text");
                     textBox.Clear();
@@ -54,7 +54,7 @@ namespace Lab
         {
             if (textBox.Text != "")
             {
-                if (uint.TryParse(textBox.Text, out uint number))
+                if (int.TryParse(textBox.Text, out int number))
                 {
                     MessageBox.Show("Wrong value in " + textBox.Name + " the value was not used in the search");
                     textBox.Clear();
@@ -84,17 +84,6 @@ namespace Lab
                     textBox.Clear();
                     return false;
                 }
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public static bool CompareTwoBoolValue(bool value1, bool value2)
-        {
-            if (value1 == true && value2 == true)
-            {
-                return true;
             }
             else
             {

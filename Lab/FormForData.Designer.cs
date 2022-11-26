@@ -35,11 +35,11 @@
             this.IdBox = new System.Windows.Forms.TextBox();
             this.TitleBox = new System.Windows.Forms.TextBox();
             this.PublishingHouseIdBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PublishingHouseIdLabel = new System.Windows.Forms.Label();
+            this.IdLabel = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.AdressLabel = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.ConfirmButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,11 +63,11 @@
             this.tableLayoutPanel1.Controls.Add(this.IdBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.TitleBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.PublishingHouseIdBox, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PublishingHouseIdLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.IdLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.NameLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.AdressLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.TitleLabel, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 104);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -115,62 +115,62 @@
             this.PublishingHouseIdBox.Size = new System.Drawing.Size(664, 29);
             this.PublishingHouseIdBox.TabIndex = 12;
             // 
-            // label1
+            // PublishingHouseIdLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(28, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PublishingHouseId";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.PublishingHouseIdLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.PublishingHouseIdLabel.AutoSize = true;
+            this.PublishingHouseIdLabel.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PublishingHouseIdLabel.Location = new System.Drawing.Point(28, 7);
+            this.PublishingHouseIdLabel.Name = "PublishingHouseIdLabel";
+            this.PublishingHouseIdLabel.Size = new System.Drawing.Size(147, 24);
+            this.PublishingHouseIdLabel.TabIndex = 0;
+            this.PublishingHouseIdLabel.Text = "PublishingHouseId";
+            this.PublishingHouseIdLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label5
+            // IdLabel
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(150, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 24);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Id";
+            this.IdLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.IdLabel.Location = new System.Drawing.Point(150, 82);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(25, 24);
+            this.IdLabel.TabIndex = 4;
+            this.IdLabel.Text = "Id";
             // 
-            // label2
+            // NameLabel
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(123, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Name";
+            this.NameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NameLabel.Location = new System.Drawing.Point(123, 120);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(52, 24);
+            this.NameLabel.TabIndex = 1;
+            this.NameLabel.Text = "Name";
             // 
-            // label4
+            // AdressLabel
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(117, 159);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 24);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Adress";
+            this.AdressLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.AdressLabel.AutoSize = true;
+            this.AdressLabel.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AdressLabel.Location = new System.Drawing.Point(117, 159);
+            this.AdressLabel.Name = "AdressLabel";
+            this.AdressLabel.Size = new System.Drawing.Size(58, 24);
+            this.AdressLabel.TabIndex = 3;
+            this.AdressLabel.Text = "Adress";
             // 
-            // label3
+            // TitleLabel
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(131, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 24);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Title";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TitleLabel.Location = new System.Drawing.Point(131, 45);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(44, 24);
+            this.TitleLabel.TabIndex = 2;
+            this.TitleLabel.Text = "Title";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ConfirmButton
             // 
@@ -207,11 +207,11 @@
 
         private Label labelInformation;
         private TableLayoutPanel tableLayoutPanel1;
-        private Label label1;
-        private Label label3;
-        private Label label5;
-        private Label label2;
-        private Label label4;
+        private Label PublishingHouseIdLabel;
+        private Label TitleLabel;
+        private Label IdLabel;
+        private Label NameLabel;
+        private Label AdressLabel;
         protected TextBox AdressBox;
         protected TextBox NameBox;
         protected TextBox IdBox;
